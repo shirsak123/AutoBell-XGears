@@ -1,10 +1,12 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
+
+
     <!-- Add your site or application content here -->
 
     <div class="exporso_wrapper">
-        {% include 'header.html' %}
-
+    {% include 'header.html' %}
+        
 
         <!--Breadcrumb section-->
         <div class="breadcrumb_section">
@@ -150,7 +152,7 @@
 
         <!--Footer start-->
 
-        {% include 'footer.html' %}
+                {% include 'footer.html' %}
 
         <!--Footer end-->
 
@@ -161,10 +163,11 @@
 
 
 
-
+        <!-- Map js code here -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdWLY_Y6FL7QGW5vcO3zajUEsrKfQPNzI"></script>
         <script src="https://www.google.com/jsapi"></script>
         <script src="assets/js/map.js"></script>
 
 
-        {% endblock %}
+        <!-- all js here -->
+    {% endblock %}
