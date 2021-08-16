@@ -4,3 +4,6 @@ from django.shortcuts import render, redirect
 
 def home(request):
     return render(request,'home/index.html')
+
+def aboutUs(request):
+    return render(request,'home/about-us.html')
