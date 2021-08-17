@@ -1,0 +1,98 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<!-- ========================= SECTION MAIN ========================= -->
+
+<div class="container-fluid" style="overflow-x: hidden">
+
+<div class="slider">
+	<div class="slider__slide slider__slide--active" data-slide="1">
+		<div class="slider__wrap">
+		<div class="slider__back"></div>
+		</div>
+		<div class="slider__inner">
+		<div class="slider__content">
+			<h1>Best <br> Helmet</h1><a class="go-to-next">next</a>
+		</div>
+		</div>
+	</div>
+	<div class="slider__slide" data-slide="2">
+		<div class="slider__wrap">
+		<div class="slider__back"></div>
+		</div>
+		<div class="slider__inner">
+		<div class="slider__content">
+			<h1>Protective <br> Gloves</h1><a class="go-to-next">next</a>
+		</div>
+		</div>
+	</div>
+	<div class="slider__slide" data-slide="3">
+		<div class="slider__wrap">
+		<div class="slider__back"></div>
+		</div>
+		<div class="slider__inner">
+		<div class="slider__content">
+			<h1>Outstanding <br> Exhaust</h1><a class="go-to-next">next</a>
+		</div>
+		</div>
+	</div>
+		<div class="slider__slide" data-slide="4">
+		<div class="slider__wrap">
+		<div class="slider__back"></div>
+		</div>
+		<div class="slider__inner">
+		<div class="slider__content">
+			<h1>Bike <br> Accessories</h1><a class="go-to-next">next</a>
+		</div>
+		</div>
+	</div>
+	<div class="slider__indicators"></div>
+	</div>
+	</div>
+
+</div>
+</div> <!-- container //  -->
+<!-- ========================= SECTION MAIN END// ========================= -->
+
+<!-- ========================= SECTION  ========================= -->
+<section class="section-name padding-y-sm">
+<div class="container">
+
+<header class="section-heading">
+	<a href="{% url 'store' %}" class="btn btn-outline-secondary float-right">See all</a>
+	<h3 class="section-title">Popular products</h3>
+</header><!-- sect-heading -->
+
+
+<div class="row">
+	{% for product in products %}
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="{{ product.get_url }}" class="img-wrap"> <img src="{{ product.images.url }}"> </a>
+			<figcaption class="info-wrap">
+				<a href="{{ product.get_url }}" class="title">{{ product.product_name }}</a>
+				<div class="price mt-1">$ {{ product.price }}</div> <!-- price-wrap.// -->
+			</figcaption>
+		</div>
+	</div> <!-- col.// -->
+	{% endfor %}
+</div> <!-- row.// -->
+
+</div><!-- container // -->
+</section>
+<!-- ========================= SECTION  END// ========================= -->
+
+
+
+
+
+</body>
+</html>
+
+{% endblock %}
