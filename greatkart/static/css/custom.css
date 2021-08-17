@@ -256,7 +256,7 @@ label:hover ~ input:checked ~ label{
   background-image: url(../images/helmet.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-
+/* lol */
 }
 .slider__slide:nth-child(2) .slider__back, .slider__slide:nth-child(2) .slider__inner {
   background-image: url(../images/glove.jpg) ;
