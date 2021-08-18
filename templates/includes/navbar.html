@@ -24,8 +24,8 @@
       <img class="logo" src="{% static './images/index.png' %}">
     </a> <!-- brand-wrap.// -->
   </div>
-  <div class="col-lg col-sm col-md col-6 flex-grow-0">
-    <div class="category-wrap dropdown d-inline-block float-right">
+  <div class="col-lg col-sm col-md col-6 flex-grow-0" id="categories">
+    <div class="category-wrap dropdown d-inline-block float-right" id="category">
       <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
         <i class="fa fa-bars"></i> All category
       </button>
@@ -37,10 +37,10 @@
       </div>
     </div>  <!-- category-wrap.// -->
   </div> <!-- col.// -->
-  <a href="{% url 'store' %}" class="btn btn-outline-secondary">Store</a>
-  <div class="col-lg  col-md-6 col-sm-12 col">
+  <a href="{% url 'store' %}" class="btn btn-outline-secondary" id="store">Store</a>
+  <div class="col-lg  col-md-6 col-sm-12 col" id="search">
     <form action="{% url 'search' %}" class="search" method='GET'>
-      <div class="input-group w-100">
+      <div class="input-group w-100" id="searchbar">
           <input type="text" class="form-control" style="width:60%;" placeholder="Search" name="keyword">
 
           <div class="input-group-append">
@@ -54,12 +54,16 @@
   <div class="col-lg-3 col-sm-6 col-8 order-2 order-lg-3">
         <div class="d-flex justify-content-end mb-3 mb-lg-0">
           {% if user.id is None %}
-          <div class="widget-header">
-            <small class="title text-muted">Welcome guest!</small>
-            <div>
-              <a href="{% url 'login' %}">Sign in</a> <span class="dark-transp"> | </span>
-              <a href="{% url 'register' %}"> Register</a>
-            </div>
+          <div class="widget-header" id="widget">
+          <div id="nav-widget">
+              <small class="title text-muted" >Welcome guest!</small>
+              <a href="{% url 'login' %}"><i class="far fa-user-circle pl-2"></i>Login</a>
+          </div>
+
+{#            <div>#}
+{#              <a href="{% url 'login' %}">Sign in</a> <span class="dark-transp"> | </span>#}
+{#              <a href="{% url 'register' %}"> Register</a>#}
+{#            </div>#}
           </div>
           {% else %}
           <div class="widget-header">
@@ -70,9 +74,9 @@
             </div>
           </div>
           {% endif %}
-          <a href="{% url 'cart' %}" class="widget-header pl-3 ml-3">
-            <div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
-            <span class="badge badge-pill badge-warning notify">{{cart_count}}</span>
+          <a href="{% url 'cart' %}" class="widget-header pl-3 ml-3" id="nav-cart">
+            <div class="icon icon-sm rounded-circle border cart-head"><i class="fa fa-shopping-cart"></i></div>
+            <span class="badge badge-pill badge-warning notify" id="count">{{cart_count}}</span>
           </a>
         </div> <!-- widgets-wrap.// -->
       </div> <!-- col.// -->

@@ -290,6 +290,7 @@ label:hover ~ input:checked ~ label{
   z-index: 9999;
 }
 
+
 @media all and (max-width: 583px) {
   .slider {
     position: relative;
@@ -304,5 +305,55 @@ label:hover ~ input:checked ~ label{
   .slider__content h1 {
     font-size:38px;
   }
+
+}
+
+
+@media all and (max-width: 1024px) {
+  #search{
+    position: relative;
+  }
+  #searchbar{
+    position:absolute;
+    top: -14px;
+    left:-100px;
+
+  }
+
+  #categories{
+    position: relative;
+  }
+  #category{
+    position:absolute;
+    top:-20px;
+    left:300px;
+  }
+  #store{
+    position:absolute;
+    top: 80px;
+    left: 420px;
+  }
+  #nav-cart{
+    position:relative;
+  }
+  .cart-head{
+    position:absolute;
+    top: -55px;
+    left: 320px;
+  }
+  #count{
+        position:absolute;
+    top:-55px;
+    left: 360px;
+  }
+
+  #widget{
+    position:relative;
+  }
+/*#nav-widget{*/
+/*position:absolute;*/
+/*}*/
+
+
 
 }
