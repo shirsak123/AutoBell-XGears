@@ -1,5 +1,5 @@
-
-
+{% url 'myadmin:orders' as orders_page %}
+{% url 'myadmin:dashboard' as dashboard_page %}
     <div class="sidebar">
       <div class="sidebar-wrapper">
         
@@ -15,10 +15,17 @@
         </div>
 
         <ul class="nav">
-          <li class="{% if 'index' in segment %} active {% endif %} ">
-            <a href="/">
+          <li class="{% if request.path == dashboard_page %}active{% endif %}">
+            <a href="{{dashboard_page}}">
+
               <i class="tim-icons icon-chart-pie-36"></i>
               <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="{% if request.path == orders_page %}active{% endif %}">
+            <a href="{{orders_page}}">
+              <i class="tim-icons icon-align-center"></i>
+              <p>Orders</p>
             </a>
           </li>
           <li class="{% if 'icons' in segment %} active {% endif %}">
@@ -55,12 +62,6 @@
             <a href="/ui-typography.html">
               <i class="tim-icons icon-align-center"></i>
               <p>Typography</p>
-            </a>
-          </li>
-          <li class="active">
-            <a href="/myadmin/orders/">
-              <i class="tim-icons icon-align-center"></i>
-              <p>Orders</p>
             </a>
           </li>
           <li class="{% if 'rtl-support' in segment %} active {% endif %}">

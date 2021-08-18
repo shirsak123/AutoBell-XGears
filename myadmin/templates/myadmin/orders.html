@@ -54,7 +54,7 @@
                   <span class="badge badge-info">{{order.status}}</span>
                 </td>
                 <td>
-                <a class="btn btn-fill btn-secondary">Detail</a>
+                <a href="{% url 'myadmin:order-detail' order.id %}" class="btn btn-fill btn-secondary">Detail</a>
                 </td>
               </tr>
               {% endfor %}              
