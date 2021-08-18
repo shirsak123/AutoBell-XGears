@@ -23,8 +23,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}">
-  <link rel="icon" type="image/png"          href="{% static 'assets/img/favicon.png'    %}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'myadmin/assets/img/apple-icon.png' %}">
+  <link rel="icon" type="image/png"          href="{% static 'myadmin/assets/img/favicon.png'    %}">
 
   <title>
     Black Dashboard Django - {% block title %}{% endblock %} | Creative-Tim
@@ -35,11 +35,11 @@
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
   <!-- Nucleo Icons -->
-  <link href="{% static 'assets/css/nucleo-icons.css' %}" rel="stylesheet" />
+  <link href="{% static 'myadmin/assets/css/nucleo-icons.css' %}" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="{% static 'assets/css/black-dashboard.css' %}" rel="stylesheet" />
+  <link href="{% static 'myadmin/assets/css/black-dashboard.css' %}" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="{% static 'assets/demo/demo.css' %}" rel="stylesheet" />
+  <link href="{% static 'myadmin/assets/demo/demo.css' %}" rel="stylesheet" />
 
   <!-- Specific Page CSS goes HERE  -->
   {% block stylesheets %}{% endblock stylesheets %}
@@ -49,11 +49,11 @@
 <body class="">
   <div class="wrapper">
 
-    {% include 'includes/sidebar.html' %}
+    {% include 'myadmin/includes/sidebar.html' %}
 
     <div class="main-panel">
 
-      {% include 'includes/navigation.html' %}
+      {% include 'myadmin/includes/navigation.html' %}
 
       <div class="content">
 
@@ -61,17 +61,17 @@
 
       </div>
 
-      {% include 'includes/footer.html' %}
+      {% include 'myadmin/includes/footer.html' %}
 
     </div>
     
   </div>
 
-  {% include 'includes/fixed-plugin.html' %}
+  {% include 'myadmin/includes/fixed-plugin.html' %}
 
-  {% include 'includes/scripts.html' %}
+  {% include 'myadmin/includes/scripts.html' %}
 
-  {% include 'includes/scripts-sidebar.html' %}
+  {% include 'myadmin/includes/scripts-sidebar.html' %}
 
   <!-- Specific Page JS goes HERE  -->
   {% block javascripts %}{% endblock javascripts %}
