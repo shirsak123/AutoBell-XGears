@@ -10,6 +10,7 @@ from django.http import HttpResponse
 from .forms import ReviewForm
 from django.contrib import messages
 from orders.models import OrderProduct
+from store.models import ProductGallery
 
 
 def store(request, category_slug=None):
@@ -55,11 +56,15 @@ def product_detail(request, category_slug, product_slug):
     # Get the reviews
     reviews = ReviewRating.objects.filter(product_id=single_product.id, status=True)
 
+    # Get the product gallery
+    product_gallery = ProductGallery.objects.filter(product_id=single_product.id)
+
     context = {
         'single_product': single_product,
         'in_cart'       : in_cart,
         'orderproduct': orderproduct,
         'reviews': reviews,
+        'product_gallery': product_gallery,
     }
     return render(request, 'store/product_detail.html', context)
 
