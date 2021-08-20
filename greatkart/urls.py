@@ -28,4 +28,5 @@ urlpatterns = [
 
     # ORDERS
     path('orders/', include('orders.urls')),
+    path('myadmin/', include('myadmin.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
